@@ -132,16 +132,6 @@ export default function ServicesSection() {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="text-center mt-12">
-          <Link
-            href="/services"
-            className="inline-flex items-center gap-2 bg-warm-gradient text-white px-8 py-4 rounded-full font-bold shadow-warm-lg hover:shadow-warm-xl hover:scale-105 transition-all duration-200"
-          >
-            View All Services
-            <ArrowRight size={16} />
-          </Link>
-        </div>
       </div>
     </section>
   );
