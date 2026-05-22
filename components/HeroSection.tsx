@@ -53,13 +53,13 @@ export default function HeroSection() {
               <Phone size={18} />
               Call Emergency Line
             </a>
-            <Link
+            {/* <Link
               href="/services"
               className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-full font-semibold text-base transition-all duration-200"
             >
               View All Services
               <ArrowRight size={16} />
-            </Link>
+            </Link> */}
           </div>
 
         </div>
