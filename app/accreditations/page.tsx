@@ -337,7 +337,7 @@ export default function AccreditationsPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-[#C0392B] py-14">
+      {/* <section className="bg-[#C0392B] py-14">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h2 className="font-serif text-2xl md:text-3xl font-bold mb-3">Questions About Our Certifications?</h2>
           <p className="text-white/80 mb-7 text-sm leading-relaxed max-w-lg mx-auto">
@@ -358,7 +358,7 @@ export default function AccreditationsPage() {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   )
 }

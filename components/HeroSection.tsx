@@ -53,19 +53,19 @@ export default function HeroSection() {
               <Phone size={18} />
               Call Emergency Line
             </a>
-            {/* <Link
+            <Link
               href="/services"
               className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-full font-semibold text-base transition-all duration-200"
             >
               View All Services
               <ArrowRight size={16} />
-            </Link> */}
+            </Link>
           </div>
 
         </div>
       </div>
       {/* Bottom info strip */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 bg-gradient-to-r from-[#9f0000] to-[#c74507]">
+      {/* <div className="absolute -bottom-10 left-0 right-0 z-10 bg-gradient-to-r from-[#9f0000] to-[#c74507]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-white text-sm text-center">
             {[
@@ -81,7 +81,7 @@ export default function HeroSection() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
