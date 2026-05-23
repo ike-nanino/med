@@ -35,13 +35,13 @@ export default function HeroSection() {
           {/* Headline */}
           <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-6 animate-fade-up">
             When Every{" "}
-            <span className="italic text-[#ff7a0f]">Second</span>
+            <span className="italic text-[#182466]">Second</span>
             <br />
             Counts
           </h1>
 
           <p className="text-lg sm:text-xl text-gray-200 leading-relaxed mb-8 animate-fade-up" style={{ animationDelay: "0.15s" }}>
-            AirMed Global delivers rapid, compassionate medical transport across 180+ countries. From ICU-equipped air ambulances to ground coordination — we bring clinical excellence to wherever you need us.
+            MedAir Global delivers rapid, compassionate medical transport across 180+ countries. From ICU-equipped air ambulances to ground coordination — we bring clinical excellence to wherever you need us.
           </p>
 
           {/* CTAs */}
@@ -54,7 +54,7 @@ export default function HeroSection() {
               Call Emergency Line
             </a>
             <Link
-              href="/services"
+              href="/#services"
               className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-full font-semibold text-base transition-all duration-200"
             >
               View All Services

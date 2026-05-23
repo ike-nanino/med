@@ -35,8 +35,13 @@ export default function Navbar() {
 
   return (
     <>
+      {/*
+        sticky top-0 z-40 — sits right below the EmergencyBar (z-50) naturally
+        because they are sequential siblings in the DOM. Both are sticky top-0,
+        so the browser stacks them one after the other without any gap or overlap.
+      */}
       <header
-        className={`sticky top-8 z-40 transition-all duration-300 ${
+        className={`sticky top-0 z-40 transition-all duration-300 ${
           scrolled
             ? "bg-white/95 backdrop-blur-md shadow-[0_2px_20px_rgba(0,0,0,0.08)] border-b border-stone-200"
             : "bg-[#FDF8F2]/80 backdrop-blur-sm"
@@ -44,13 +49,14 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 gap-6">
+
             {/* Logo */}
             <Link href="/" className="flex items-center shrink-0 group">
               <Image
                 src="/images/logo.png"
                 alt="Med Air Transport Logo"
-                width={80}
-                height={20}
+                width={90}
+                height={30}
                 priority
                 className="h-auto w-[60px] md:w-[90px] object-contain transition-transform duration-300 group-hover:scale-105"
               />
@@ -101,13 +107,19 @@ export default function Navbar() {
               className="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded hover:bg-stone-100 transition-colors"
             >
               <span
-                className={`block w-5 h-0.5 bg-[#1C1C1E] rounded-full transition-all duration-300 origin-center ${open ? "rotate-45 translate-y-2" : ""}`}
+                className={`block w-5 h-0.5 bg-[#1C1C1E] rounded-full transition-all duration-300 origin-center ${
+                  open ? "rotate-45 translate-y-2" : ""
+                }`}
               />
               <span
-                className={`block w-5 h-0.5 bg-[#1C1C1E] rounded-full transition-all duration-300 ${open ? "opacity-0 scale-x-0" : ""}`}
+                className={`block w-5 h-0.5 bg-[#1C1C1E] rounded-full transition-all duration-300 ${
+                  open ? "opacity-0 scale-x-0" : ""
+                }`}
               />
               <span
-                className={`block w-5 h-0.5 bg-[#1C1C1E] rounded-full transition-all duration-300 origin-center ${open ? "-rotate-45 -translate-y-2" : ""}`}
+                className={`block w-5 h-0.5 bg-[#1C1C1E] rounded-full transition-all duration-300 origin-center ${
+                  open ? "-rotate-45 -translate-y-2" : ""
+                }`}
               />
             </button>
           </div>
@@ -116,8 +128,13 @@ export default function Navbar() {
 
       {/* Mobile Overlay */}
       <div
-        className={`fixed inset-0 z-30 lg:hidden transition-all duration-300 ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+        className={`fixed inset-0 z-30 lg:hidden transition-all duration-300 ${
+          open
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
       >
+        {/* Backdrop */}
         <div
           className="absolute inset-0 bg-black/40 backdrop-blur-sm"
           onClick={() => setOpen(false)}
@@ -125,12 +142,18 @@ export default function Navbar() {
 
         {/* Slide-in drawer */}
         <div
-          className={`absolute top-0 right-0 h-full w-72 bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-out ${open ? "translate-x-0" : "translate-x-full"}`}
+          className={`absolute top-0 right-0 h-full w-72 bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-out ${
+            open ? "translate-x-0" : "translate-x-full"
+          }`}
         >
           <div className="flex items-center justify-between px-6 py-5 border-b border-stone-100">
-            <span className="font-serif font-bold text-lg text-[#1C1C1E]">
-              MedAir <span className="text-[#C0392B]">Global</span>
-            </span>
+            <Image
+              src="/images/logo.png"
+              alt="Med Air Transport Logo"
+              width={80}
+              height={25}
+              className="h-auto w-[70px] object-contain"
+            />
             <button
               onClick={() => setOpen(false)}
               aria-label="Close menu"
@@ -183,10 +206,10 @@ export default function Navbar() {
               +1 (800) 555-0199
             </a>
             <a
-              href="mailto:dispatch@medairglobal.com"
+              href="mailto:medairtransportservice@outlook.com"
               className="flex items-center justify-center gap-2 w-full border-2 border-[#C0392B] text-[#C0392B] font-semibold py-3 rounded-lg hover:bg-red-50 transition-colors text-sm"
             >
-              dispatch@medairglobal.com
+              medairtransportservice@outlook.com
             </a>
           </div>
         </div>
