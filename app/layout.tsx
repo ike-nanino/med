@@ -3,7 +3,7 @@ import './globals.css'
 
 import Navbar       from '@/components/Navbar'
 import Footer       from '@/components/Footer'
-import EmergencyBar from '@/components/Emergencybar'
+import EmergencyBar from '@/components/EmergencyBar'
 
 export const metadata: Metadata = {
   title: {
