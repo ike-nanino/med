@@ -17,7 +17,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
+    const onScroll = () => setScrolled(window.scrollY > 200);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -41,7 +41,7 @@ export default function Navbar() {
         so the browser stacks them one after the other without any gap or overlap.
       */}
       <header
-        className={`sticky top-0 z-40 transition-all duration-300 ${
+        className={`sticky top-8 z-40 transition-all duration-300 ${
           scrolled
             ? "bg-white/95 backdrop-blur-md shadow-[0_2px_20px_rgba(0,0,0,0.08)] border-b border-stone-200"
             : "bg-[#FDF8F2]/80 backdrop-blur-sm"

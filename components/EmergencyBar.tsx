@@ -10,9 +10,7 @@ export default function EmergencyBar() {
               +1 (800) 555-0199
             </a>
             <span className="mx-2 text-white/30">·</span>
-            <a href="tel:+442071234567" className="text-amber-400 font-semibold hover:text-white transition-colors">
-              +44 207 123 4567
-            </a>
+           
             <span className="mx-2 text-white/30">·</span>
             <a
               href="mailto:medairtransportservice@outlook.com"

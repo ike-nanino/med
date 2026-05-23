@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 const services = [
@@ -25,13 +26,16 @@ export default function Footer() {
 
         {/* Brand */}
         <div className="lg:col-span-1">
-          <Link href="/" className="flex items-center gap-2.5 mb-5">
-            <span className="w-9 h-9 rounded bg-[#C0392B] flex items-center justify-center text-white text-lg font-bold">✚</span>
-            <span className="flex flex-col leading-none">
-              <span className="font-serif font-extrabold text-xl text-white tracking-tight leading-none">MedAir</span>
-              <span className="text-[9px] font-bold tracking-[0.2em] text-[#C0392B] uppercase leading-none mt-0.5">Global</span>
-            </span>
-          </Link>
+         <Link href="/" className="flex items-center shrink-0 group">
+                       <Image
+                         src="/images/logo.png"
+                         alt="Med Air Transport Logo"
+                         width={90}
+                         height={30}
+                         priority
+                         className="h-auto w-[60px] md:w-[90px] object-contain transition-transform duration-300 group-hover:scale-105"
+                       />
+                     </Link>
           <p className="text-white/60 text-sm leading-relaxed mb-6">
             World-class medical transport services across six continents. Available around the clock — because emergencies don&apos;t wait.
           </p>
